@@ -1,0 +1,1 @@
+allow hal_face_default debug_hal_face_service:service_manager { add };

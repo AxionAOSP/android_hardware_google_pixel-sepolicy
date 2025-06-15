@@ -1,0 +1,2 @@
+com.google.face.debug.IDebugHost/default          u:object_r:debug_hal_face_service:s0
+com.google.face.debug.IDebugManager/default       u:object_r:debug_hal_face_service:s0
