@@ -14,6 +14,7 @@ allow pixelstats_vendor self:netlink_kobject_uevent_socket create_socket_perms_n
 allow pixelstats_vendor hal_contexthub_default:unix_stream_socket connectto;
 
 allow pixelstats_vendor mnt_vendor_file:dir search;
+allow pixelstats_vendor dm_device:blk_file r_file_perms;
 allow pixelstats_vendor sysfs_scsi_devices_0000:dir search;
 allow pixelstats_vendor sysfs_scsi_devices_0000:file rw_file_perms;
 allow pixelstats_vendor sysfs_fs_f2fs:dir search;
@@ -49,3 +50,6 @@ r_dir_file(pixelstats_vendor, sysfs_vendor_mm)
 
 # Pixel Water Intrusion Stats (h2omg)
 #  see h2omg/pixelstats_vendor.te for additional access policies
+
+r_dir_file(pixelstats_vendor, block_device)
+r_dir_file(pixelstats_vendor, sysfs_dm)
